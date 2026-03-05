@@ -5,7 +5,8 @@
     "moduleResolution": "NodeNext",
     "noEmit": true,
     "allowJs": true,
-    "checkJs": true
+    "checkJs": true,
+    "noImplicitAny": true
   },
-  "include": ["src/**/*"]
+  "include": ["src/**/*", "tests/**/*"]
 }

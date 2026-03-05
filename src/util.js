@@ -1,25 +1,28 @@
-function noop(a) {
-    return a;
+import { gzipSize } from 'gzip-size';
+import { sync as brotliSize } from 'brotli-size';
+
+/**
+ * @param {any} a
+ * @return {any}
+ */
+export const noop = (a) => a;
+
+/**
+ * @param {string} input
+ */
+const noneSize = (input) => Buffer.byteLength(input);
+
+const compressionMethods = {
+    brotli: brotliSize,
+    gzip: gzipSize,
+    none: noneSize,
+};
+
+/**
+ * @param {'gzip' | 'brotli' | 'none'} method
+ * @param {string} content
+ * @return {Promise<number>}
+ */
+export async function compressContent(method, content) {
+    return await compressionMethods[method](content);
 }
-exports.noop = noop;
-function toMap(names, values) {
-    return names.reduce((map, name, i) => {
-        map[name] = values[i];
-        return map;
-    }, {});
-}
-exports.toMap = toMap;
-function dedupe(item, index, arr) {
-    return arr.indexOf(item) === index;
-}
-exports.dedupe = dedupe;
-function toFileMap(files) {
-    return files.reduce((result, file) => {
-        if (file.size) {
-            // excluding files with size 0
-            result[file.filename] = file.size;
-        }
-        return result;
-    }, {});
-}
-exports.toFileMap = toFileMap;

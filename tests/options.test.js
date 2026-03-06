@@ -2,26 +2,26 @@ import { test } from 'uvu';
 import * as assert from 'uvu/assert';
 import path from 'node:path';
 
-import { SizePluginCore } from '../src/index.js';
+import { SizePlugin } from '../src/index.js';
 
 import { compressedResultAssertionHelper } from './utils.js';
 
 test('Should support `compression`', async () => {
     const dataPath = path.resolve(process.cwd(), 'tests', 'data');
 
-    const resultGzip = await (new SizePluginCore({
+    const resultGzip = await (new SizePlugin({
         compression: 'gzip',
     })).readFromDisk(dataPath);
 
     compressedResultAssertionHelper(resultGzip);
 
-    const resultBrotli = await (new SizePluginCore({
+    const resultBrotli = await (new SizePlugin({
         compression: 'brotli',
     })).readFromDisk(dataPath);
 
     compressedResultAssertionHelper(resultBrotli);
 
-    const resultNone = await (new SizePluginCore({
+    const resultNone = await (new SizePlugin({
         compression: 'none',
     })).readFromDisk(dataPath);
 
@@ -29,7 +29,7 @@ test('Should support `compression`', async () => {
 });
 
 test('Should support `pattern`', async () => {
-    const plugin = new SizePluginCore({
+    const plugin = new SizePlugin({
         pattern: '**/*.avif'
     });
 
@@ -39,7 +39,7 @@ test('Should support `pattern`', async () => {
 });
 
 test('Should support `exclude`', async () => {
-    const plugin = new SizePluginCore({
+    const plugin = new SizePlugin({
         exclude: '**/*.{css,png}'
     });
 
@@ -49,7 +49,7 @@ test('Should support `exclude`', async () => {
 });
 
 test('Should support `stripHash`', async () => {
-    const plugin = new SizePluginCore({
+    const plugin = new SizePlugin({
         stripHash: (filename) => filename.replace(/-(.{8})\.(css|mjs|js)/, '.$2'),
     });
 

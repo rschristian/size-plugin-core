@@ -9,9 +9,7 @@ export interface PluginOptions {
     stripHash?: (filename: string) => string;
 }
 
-
-
-export class SizePluginCore {
+export class SizePlugin {
     /**
      * @param {object} options
      * @param {string} [options.compression] compression method to use, default: 'gzip'

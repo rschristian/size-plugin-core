@@ -14,7 +14,7 @@ import { noop, compressContent } from './util.js';
  * @param {string} [options.exclude] minimatch pattern of files NOT to track, default: null
  * @param {(filename: string) => string} [options.stripHash] custom function to remove/normalize hashed filenames for comparison, default: (filename) => filename
  */
-export class SizePluginCore {
+export class SizePlugin {
     /** @param {PluginOptions} options */
     constructor(options) {
         options.compression ??= 'gzip';

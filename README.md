@@ -1,13 +1,13 @@
-# @rschristian/size-plugin-core
+# @rschristian/size-plugin
 
-Minimal fork of [kuldeepkeshwar/size-plugin-core](https://github.com/kuldeepkeshwar/size-plugin-core), trimmed down unnecessary functions and updated to more modern JS.
+Minimal fork of [kuldeepkeshwar/size-plugin-core](https://github.com/kuldeepkeshwar/size-plugin-core), trimmed down unnecessary functions and updated to more modern-ish JS. This is built for [preactjs/compresses-size-action](https://github.com/preactjs/compresses-size-action) in particular but can be used elsewhere too.
 
 ## Usage
 
 ```js
-import { SizePluginCore } from '@rschristian/size-plugin-core';
+import { SizePlugin } from '@rschristian/size-plugin';
 
-const plugin = new SizePluginCore({
+const plugin = new SizePlugin({
   compression: 'gzip',
   pattern: '**/*.{js,css}',
   exclude: 'vendor/**',
@@ -37,4 +37,4 @@ All options are optional and have default values. You can specify any combinatio
 
 ## License
 
-[Apache-2.0](https://github.com/rschristian/size-plugin-core/blob/master/LICENSE)
+[Apache-2.0](https://github.com/rschristian/size-plugin/blob/master/LICENSE)

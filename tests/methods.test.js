@@ -2,12 +2,12 @@ import { test } from 'uvu';
 import * as assert from 'uvu/assert';
 import path from 'node:path';
 
-import { SizePluginCore } from '../src/index.js';
+import { SizePlugin } from '../src/index.js';
 
 import { compressedResultAssertionHelper } from './utils.js';
 
 test('Should support `.filterFiles`', async () => {
-    const plugin = new SizePluginCore({});
+    const plugin = new SizePlugin({});
 
     const filtered = await plugin.filterFiles(['index.mjs', 'index.js', 'index.html', 'style.css', 'image.png']);
 
@@ -15,7 +15,7 @@ test('Should support `.filterFiles`', async () => {
 });
 
 test('Should support `.readFromDisk`', async () => {
-    const plugin = new SizePluginCore({});
+    const plugin = new SizePlugin({});
 
     const result = await plugin.readFromDisk(path.resolve(process.cwd(), 'tests', 'data'));
 
@@ -23,7 +23,7 @@ test('Should support `.readFromDisk`', async () => {
 });
 
 test('Should support `.getDiff`', async () => {
-    const plugin = new SizePluginCore({});
+    const plugin = new SizePlugin({});
 
     const diff = plugin.getDiff(
         {
@@ -58,7 +58,7 @@ test('Should support `.getDiff`', async () => {
 });
 
 test('should support `.printSize`', async () => {
-    const plugin = new SizePluginCore({});
+    const plugin = new SizePlugin({});
 
 
     const sizeText = plugin.printSizes([

@@ -1,5 +1,5 @@
 {
-  "name": "@rschristian/size-plugin-core",
+  "name": "@rschristian/size-plugin",
   "version": "0.1.0",
   "type": "module",
   "types": "src/index.d.ts",
@@ -10,10 +10,10 @@
   "author": "kuldeepkeshwar@gmail.com",
   "license": "Apache-2.0",
   "description": "core module for size-plugin",
-  "homepage": "https://github.com/rschristian/size-plugin-core#readme",
+  "homepage": "https://github.com/rschristian/size-plugin#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rschristian/size-plugin-core.git"
+    "url": "git+https://github.com/rschristian/size-plugin.git"
   },
   "keywords": [
     "webpack plugin",

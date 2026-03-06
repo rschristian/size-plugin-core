@@ -23,7 +23,6 @@
     "bundle size"
   ],
   "scripts": {
-    "doc": "documentation readme index.js -a public --section Options",
     "test": "uvu tests '.test.js'",
     "format": "prettier --write --ignore-path .gitignore . '!pnpm-lock.yaml'"
   },

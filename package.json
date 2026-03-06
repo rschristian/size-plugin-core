@@ -8,7 +8,7 @@
     "node": ">=22.14.0"
   },
   "author": "kuldeepkeshwar@gmail.com",
-  "license": "MIT",
+  "license": "Apache-2.0",
   "description": "core module for size-plugin",
   "homepage": "https://github.com/rschristian/size-plugin-core#readme",
   "repository": {

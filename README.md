@@ -34,3 +34,7 @@ All options are optional and have default values. You can specify any combinatio
 - `stripHash: (filename: string) => string`
   - custom function to remove/normalize hashed filenames for comparison
   - default: `null`
+
+## License
+
+[Apache-2.0](https://github.com/rschristian/size-plugin-core/blob/master/LICENSE)

@@ -1,6 +1,6 @@
 {
-  "name": "size-plugin-core",
-  "version": "0.0.9",
+  "name": "@rschristian/size-plugin-core",
+  "version": "0.1.0",
   "type": "module",
   "types": "src/index.d.ts",
   "exports": "./src/index.js",

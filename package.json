@@ -22,6 +22,12 @@
     "gzip size",
     "bundle size"
   ],
+  "files": [
+    "src",
+    "LICENSE",
+    "package.json",
+    "README.md"
+  ],
   "scripts": {
     "test": "uvu tests '.test.js'",
     "format": "prettier --write --ignore-path .gitignore . '!pnpm-lock.yaml'"

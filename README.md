@@ -1,6 +1,6 @@
 # @rschristian/size-plugin
 
-Minimal fork of [kuldeepkeshwar/size-plugin-core](https://github.com/kuldeepkeshwar/size-plugin-core), trimmed down unnecessary functions and updated to more modern-ish JS. This is built for [preactjs/compresses-size-action](https://github.com/preactjs/compresses-size-action) in particular but can be used elsewhere too.
+Minimal fork of [kuldeepkeshwar/size-plugin-core](https://github.com/kuldeepkeshwar/size-plugin-core), trimmed down unnecessary functions and updated to more modern-ish JS. This is built for [preactjs/compressed-size-action](https://github.com/preactjs/compressed-size-action) in particular but can be used elsewhere too.
 
 ## Usage
 
